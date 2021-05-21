@@ -22,6 +22,8 @@ app.use(cors())
 // This is required to bypass certificate authorization on local server
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
+app.get('/', (req, res) => res.send('hi'));
+
 // Connect to the server
 app.post('/connect', async (req, res) => {
   console.log("Connecting to email server");
